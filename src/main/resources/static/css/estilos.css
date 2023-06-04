@@ -65,7 +65,7 @@ button {
 
 input {
     border: none;
-    color: inherit;
+    color: darkblue;
     font-size: inherit;
     font-weight: inherit;
     font-family: inherit;
@@ -237,4 +237,27 @@ input[type="submit"] {
     font-size: 14px;
     text-transform: uppercase;
     cursor: pointer;
+}
+.conteudo_linkform{
+    background-color: var(--azul-escuro);
+    width: 100px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 15px;
+    text-decoration: none;
+    color: whitesmoke;
+
+}
+.conteudo_linklista {
+    background-color: var(--azul-escuro);
+    width: 200px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 35px;
+    text-decoration: none;
+    color: whitesmoke;
 }
