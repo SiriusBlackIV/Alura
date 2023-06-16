@@ -43,7 +43,7 @@ const estatisticas = document.querySelectorAll("[data-estatistica]")
 controle.forEach( (elemento) =>{
     elemento.addEventListener("click", (evento) => {
         manipulaDados(evento.target.dataset.controle, evento.target.parentNode);
-        atualizaEstatisticas (evento.target.dataset.peca);
+        atualizaEstatisticas (evento.target.dataset.peca, evento.target.dataset.controle);
     })
 });
 
@@ -58,10 +58,14 @@ function manipulaDados(operacao, controle){
     }
 }
 
-function atualizaEstatisticas (peca){
+function atualizaEstatisticas (peca, operador){
     estatisticas.forEach( (elemento) =>{
+        if (operador === "+" ){
+            elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica];
+        } else {
+            elemento.textContent = parseInt(elemento.textContent) - pecas[peca][elemento.dataset.estatistica];
+        }
 
-        elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica]
     });
 }
 
